@@ -1,0 +1,10 @@
+:root{
+    --font-size-body: 0.9375rem;
+}
+
+:root{
+    --hue: 12;
+    --saturation: 67%;
+    --lightness: 23%;
+    --fc_color-primary: hsl(var(--hue), var(--saturation), var(--lightness));
+}
