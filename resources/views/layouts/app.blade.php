@@ -4,33 +4,41 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <title>@stack('title', 'Welcome Foodcart') - {{ config('app.name', 'Foodcart') }}</title>
+        <link rel="shortcut icon" href="{{asset('/assets/img/favicon.ico')}}" type="image/x-icon">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        @stack('metacontent')
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <!-- Open Graph Meta Tags (For Social Sharing) -->
+        <meta property="og:title" content="FoodCart - Fresh & Delicious Food Delivered to Your Doorstep">
+        <meta property="og:description" content="Order fresh and tasty food online with FoodCart. Fast delivery and a wide range of delicious options!">
+        <meta property="og:image" content="{{asset('/assets/img/foodcart-preview.jpg')}}">
+        <meta property="og:url" content="https://yourwebsite.com">
+        <meta property="og:type" content="website">
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="FoodCart - Fresh & Delicious Food Delivered to Your Doorstep">
+        <meta name="twitter:description" content="Enjoy tasty and fresh food delivered fast. Order now from FoodCart!">
+        <meta name="twitter:image" content="{{asset('/assets/img/foodcart-preview.jpg')}}">
+
+        <link rel="stylesheet" href="{{asset('/assets/css/style.css')}}">
+        @stack('style')
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+    <body class="antialiased user-select-none">
+        @include('layouts.navigation')
 
-            <!-- Page Heading -->
-            @isset($header)
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endisset
+        <main class="main-wrapper">
+            @yield('content')
+        </main>
+        @include('layouts.footer')
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
+
+        {{-- site script --}}
+        <script src="{{asset('/assets/js/vue.global.js')}}"></script>
+        <script src="{{asset('/assets/js/axios.min.js')}}"></script>
+        <script src="{{asset('/assets/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('/assets/js/header.js')}}" type="module"></script>
+        @stack('script')
     </body>
 </html>
