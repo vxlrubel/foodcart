@@ -14,3 +14,15 @@ body {
     font-size: var(--font-size-body);
     background-color: hsl(0, 0%, 97%);
 }
+
+@media(width >= 1500px ){
+    .container{
+        max-width: 1460px;
+    }
+}
+
+a:active,
+button:active{
+    background-color: var(--fc_color-primary) !important;
+    color: white !important;
+}

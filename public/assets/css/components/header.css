@@ -1,0 +1,88 @@
+.primary-header-parent{
+    --logo-width: 10rem;
+    --last-item-width: 10rem;
+}
+.primary-header{
+    height: var(--fc-primacy-header-height);
+    padding-block: .325rem;
+}
+
+.primary-header .logo{
+    display: flex;
+    align-items: center;
+    width: var(--logo-width);
+}
+
+.primary-header .logo .logo-image{
+    max-width: calc(100% - 1rem);
+    mix-blend-mode: multiply;
+}
+.primary-header .search-field{
+    width: calc(100% - calc(var(--logo-width) + var(--last-item-width)));
+}
+.primary-header .nav-last-item{
+    width: var(--last-item-width);
+}
+
+.last-item-button{
+    --last-item-button-width: 2.325rem;
+    --count-width: 1.225rem;
+    position: relative;
+    display: inline-flex;
+    height: var(--last-item-button-width);
+    width: var(--last-item-button-width);
+    align-items: center;
+    justify-content: center;
+    padding: .5rem !important;
+    border-radius: 50%;
+    color: var(--fc_color-primary);
+    border: 1px solid var(--fc_color-primary) !important;
+}
+
+.last-item-button .item-count{
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--count-width);
+    width: var(--count-width);
+    font-size: .65rem;
+    padding: 0.325rem;
+    border-radius: 50%;
+    color: white;
+    background-color: var(--fc_color-primary);
+    left: calc(100% - calc(var(--count-width) / 1.5));
+    bottom: calc(100% - calc(var(--count-width) / 2));
+    z-index: 1;
+}
+.mini-cart,
+.user-droplown-content {
+	left: auto !important;
+	right: 0 !important;
+}
+.search-form{
+    padding: 0.225rem;
+    border: 2px solid var(--fc_border-color);
+    max-width: 400px;
+    margin-inline: auto;
+    transition: transform .325s ease-in-out;
+}
+.search-form:has(:focus){
+    border-color: hsl(var(--hue), var(--saturation), 85%);
+    background-color: hsl(var(--hue), var(--saturation), 97%);
+    transform: scaleX(1.15);
+}
+.search-form .btn,
+.search-form .form-control{
+    height: 30px;
+    padding: 0 !important;
+    font-size: .875rem;
+    background-color: transparent !important;
+}
+.search-form .btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    color: var(--fc_color-primary);
+}
