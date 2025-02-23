@@ -12,7 +12,9 @@
     align-items: center;
     width: var(--logo-width);
 }
-
+.primary-header .logo a{
+    background-color: transparent !important;
+}
 .primary-header .logo .logo-image{
     max-width: calc(100% - 1rem);
     mix-blend-mode: multiply;
@@ -85,4 +87,21 @@
     justify-content: center;
     width: 40px;
     color: var(--fc_color-primary);
+}
+
+/* *************************************************** */
+/* *************************************************** */
+
+.category-menu{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.category-menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }

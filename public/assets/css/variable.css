@@ -8,6 +8,7 @@
     --saturation: 67%;
     --lightness: 23%;
     --fc_color-primary: hsl(var(--hue), var(--saturation), var(--lightness));
+    --fc_color-primary-deep: hsl(var(--hue), var(--saturation), 15%);
     --fc_header-top-bg-color: hsl(var(--hue), var(--saturation), 93%);
     --fc_border-color: #dee2e6;
 }

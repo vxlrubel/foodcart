@@ -26,3 +26,14 @@ button:active{
     background-color: var(--fc_color-primary) !important;
     color: white !important;
 }
+
+.btn-primary {
+    --bs-btn-bg: var(--fc_color-primary);
+    --bs-btn-border-color: var(--fc_color-primary);
+    --bs-btn-hover-bg: var(--fc_color-primary-deep);
+    --bs-btn-hover-border-color: var(--fc_color-primary-deep);
+    --bs-btn-active-bg: var(--fc_color-primary-deep);
+    --bs-btn-active-border-color: var(--fc_color-primary-deep);
+    --bs-btn-disabled-bg: var(--fc_color-primary);
+    --bs-btn-disabled-border-color: var(--fc_color-primary);
+}

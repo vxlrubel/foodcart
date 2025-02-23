@@ -50,4 +50,21 @@
             </div>
         </div>
     </div>
+    <div class="secondary-header">
+        <div class="container">
+            <ul class="category-menu">
+                <li>
+                    <button type="button" class="btn btn-primary rounded-0 border py-1 px-2 me-5"><i class="fa-regular fa-bars-staggered"></i> Category</button>
+                </li>
+                <li><a href="javascript:void(0)">Home</a></li>
+                <li><a href="javascript:void(0)">Privacy Notice</a></li>
+                <li><a href="javascript:void(0)">New products</a></li>
+                <li><a href="javascript:void(0)">Search</a></li>
+                <li><a href="javascript:void(0)">My account</a></li>
+                <li><a href="javascript:void(0)">Contact Us</a></li>
+                <li><a href="javascript:void(0)">Menufacturers</a></li>
+            </ul>
+        </div>
+    </div>
+
 </header>
