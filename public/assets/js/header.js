@@ -3,7 +3,7 @@
 const AppNavbar = Vue.createApp({
     data(){
         return{
-            toggle: 'test'
+            toggleSubmenu: false,
         }
     },
     methods: {
