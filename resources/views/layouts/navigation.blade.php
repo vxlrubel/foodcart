@@ -54,7 +54,27 @@
         <div class="container">
             <ul class="category-menu">
                 <li>
-                    <button type="button" class="btn btn-primary rounded-0 border py-1 px-2"><i class="fa-regular fa-bars-staggered"></i> Category</button>
+                    <div class="d-none d-lg-block position-relative has-category-list-popup">
+                        <button type="button" class="btn btn-primary rounded-0 border py-1 px-2"><i class="fa-regular fa-bars-staggered"></i> Category</button>
+                        <ul class="position-absolute top-100 start-0 bg-white text-dark category-list-popup border py-3 shadow">
+                            <li><a href="javascript:void(0)">PASTRY & DESSERTS</a></li>
+                            <li><a href="javascript:void(0)">BREAD & BUNS</a></li>
+                            <li><a href="javascript:void(0)">PASTRY & DESSERTS</a></li>
+                            <li><a href="javascript:void(0)">OTHERS</a></li>
+                            <li><a href="javascript:void(0)">SAVOURY</a></li>
+                            <li><a href="javascript:void(0)">COOKIES</a></li>
+                            <li><a href="javascript:void(0)">STICK & PUFFS</a></li>
+                            <li><a href="javascript:void(0)">BUTTER CAKE</a></li>
+                            <li><a href="javascript:void(0)">SWEET & YOGURT</a></li>
+                            <li><a href="javascript:void(0)">BEVERAGE & DRINKS</a></li>
+                            <li><a href="javascript:void(0)">FROZEN FOODS</a></li>
+                            <li><a href="javascript:void(0)">REGULAR-CAKES</a></li>
+                            <li><a href="javascript:void(0)">CUSTOMIZED CAKE</a></li>
+                        </ul>
+                    </div>
+                    <div class="d-lg-none">
+                        <button type="button" class="btn btn-primary rounded-0 border py-1 px-2"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" ><i class="fa-regular fa-bars-staggered"></i> Category</button>
+                    </div>
                 </li>
                 <li>
                     <ul class="d-none d-lg-flex align-items-center gap-4 category-items">
@@ -82,9 +102,38 @@
 
 
 
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header bg-light border-bottom py-2">
+            <h5 class="offcanvas-title ps-2" id="offcanvasExampleLabel">Category Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="m-0 p-0 list-unstyled category-list-offcanvas-menu">
+                <li><a href="javascript:void(0)">Pastry & Desserts</a></li>
+                <li><a href="javascript:void(0)">Bread & Buns</a></li>
+                <li><a href="javascript:void(0)">Pastry & Desserts</a></li>
+                <li><a href="javascript:void(0)">Others</a></li>
+                <li><a href="javascript:void(0)">Savoury</a></li>
+                <li><a href="javascript:void(0)">Cookies</a></li>
+                <li><a href="javascript:void(0)">Stick & Puffs</a></li>
+                <li><a href="javascript:void(0)">Butter Cake</a></li>
+                <li><a href="javascript:void(0)">Sweet & Yogurt</a></li>
+                <li><a href="javascript:void(0)">Beverage & Drinks</a></li>
+                <li><a href="javascript:void(0)">Frozen Foods</a></li>
+                <li><a href="javascript:void(0)">Regular-Cakes</a></li>
+                <li><a href="javascript:void(0)">Customized Cake</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
     {{-- offcanvas menu --}}
     <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="categoryOffcanvas" aria-labelledby="categoryOffcanvasLabel">
-        <div class="offcanvas-header bg-light border-bottom">
+        <div class="offcanvas-header bg-light border-bottom py-2">
           <h5 class="offcanvas-title ps-2" id="categoryOffcanvasLabel">Menu</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
