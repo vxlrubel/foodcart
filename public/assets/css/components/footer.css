@@ -1,0 +1,21 @@
+.subscribe-us{
+    padding-block: 2rem;
+}
+.fc-subscribe-form{
+    padding: 2rem;
+    border: 1px solid #dee2e6;
+    background-color: hsl(0, 0%, 95%);
+    margin-inline: auto;
+    max-width: 540px;
+}
+.fc-subscribe-form:has(:focus){
+    background-color: hsla(var(--hue), var(--saturation), var(--lightness), 0.1);
+}
+@media(width >= 768px){
+    .subscribe-us{
+        padding-block: 3rem;
+    }
+    .fc-subscribe-form{
+        padding-inline: 3rem;
+    }
+}
