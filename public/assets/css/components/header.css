@@ -1,6 +1,6 @@
 .primary-header-parent{
     --logo-width: 10rem;
-    --last-item-width: 10rem;
+    --last-item-width: 11rem;
 }
 .primary-header{
     height: var(--fc-primacy-header-height);
@@ -19,6 +19,26 @@
     max-width: calc(100% - 1rem);
     mix-blend-mode: multiply;
 }
+
+@media( width < 767px ){
+    .search-field {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100% !important;
+        height: 64px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        z-index: 12;
+    }
+    .search-field.show-search-field{
+        display: flex;
+    }
+}
+
 .primary-header .search-field{
     width: calc(100% - calc(var(--logo-width) + var(--last-item-width)));
 }
