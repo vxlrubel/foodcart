@@ -14,6 +14,37 @@
         </div>
     </div>
 
+    <div class="py-4">
+        <div class="container">
+            <div class="row" style="--bs-gutter-y: 1.225rem;">
+                <div class="col-sm-6 col-lg-3">
+                    <h2 class="fs-5 text-uppercase m-0 py-1 border-bottom border-primary text-primary mb-2">Find us</h2>
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem mollitia voluptatem reprehenderit quis consequuntur architecto.
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <h2 class="fs-5 text-uppercase m-0 py-1 border-bottom border-primary text-primary mb-2">Information</h2>
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem mollitia voluptatem reprehenderit quis consequuntur architecto.
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <h2 class="fs-5 text-uppercase m-0 py-1 border-bottom border-primary text-primary mb-2">Customer service</h2>
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem mollitia voluptatem reprehenderit quis consequuntur architecto.
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <h2 class="fs-5 text-uppercase m-0 py-1 border-bottom border-primary text-primary mb-2">My account</h2>
+                    <div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem mollitia voluptatem reprehenderit quis consequuntur architecto.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         &copy;Copyright All right reserved by <a href="javascript:void(0)">Rubel Mahmud</a>
     </div>

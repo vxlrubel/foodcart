@@ -48,6 +48,9 @@ button:active{
     --bs-btn-disabled-color: var(--fc_color-primary);
     --bs-btn-disabled-border-color: var(--fc_color-primary);
 }
+.border-primary {
+    border-color: var(--fc_color-primary) !important;
+}
 .text-primary {
     color: var(--fc_color-primary) !important;
 }
