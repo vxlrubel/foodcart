@@ -1,13 +1,13 @@
 <header class="header-area clearfix" id="siteNavbar" v-cloak>
     <div class="primary-header-parent bg-white">
         <div class="container">
-            <div class="primary-header d-flex align-items-center border-bottom">
+            <div class="primary-header d-flex align-items-center border-bottom justify-content-between">
                 <div class="logo">
                     <a href="{{url('/')}}">
                         <img src="{{asset('/assets/img/logo.jpeg')}}" alt="logo image" class="logo-image">
                     </a>
                 </div>
-                <div class="search-field px-4">
+                <div class="search-field px-4" :class="toggleSearchField ? 'show-search-field' : ''" @click.stop>
                     <form action="javascript:void(0)" class="search-form">
                         <div class="d-flex align-items-center">
                             <input type="text" class="form-control rounded-0 border-0 shadow-none">
@@ -19,10 +19,15 @@
                 </div>
                 <div class="nav-last-item">
                     <div class="d-flex align-items-center gap-2 justify-content-end">
+                        <button class="btn last-item-button border-0 shadow-none d-md-none" type="button" @click.stop="toggleSearchField = !toggleSearchField">
+                            <i class="fa-regular fa-magnifying-glass"></i>
+                        </button>
+
                         <button class="btn last-item-button border-0 shadow-none" type="button">
                             <i class="fa-light fa-heart"></i>
                             <span class="item-count">10</span>
                         </button>
+
                         <div class="dropdown">
                             <button class="btn last-item-button border-0 shadow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa-light fa-user"></i>
@@ -34,6 +39,7 @@
                               <li><a class="dropdown-item" href="#">Dashboard</a></li>
                             </ul>
                         </div>
+
                         <div class="dropdown">
                             <button class="btn last-item-button border-0 shadow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa-light fa-cart-shopping"></i>
