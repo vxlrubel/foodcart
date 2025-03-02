@@ -3,7 +3,7 @@
         <div class="container">
             <div class="primary-header d-flex align-items-center border-bottom">
                 <div class="logo">
-                    <a href="#">
+                    <a href="{{url('/')}}">
                         <img src="{{asset('/assets/img/logo.jpeg')}}" alt="logo image" class="logo-image">
                     </a>
                 </div>
@@ -39,10 +39,89 @@
                                 <i class="fa-light fa-cart-shopping"></i>
                                 <span class="item-count">10</span>
                             </button>
-                            <ul class="dropdown-menu mini-cart">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Another action</a></li>
-                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <ul class="dropdown-menu mini-cart p-0 rounded-0">
+                                <li class="mini-cart-header bg-light px-3">
+                                    <h3 class="fs-6 m-0 py-2 border-bottom d-flex align-items-center gap-1">
+                                        <i class="fa-light fa-cart-shopping"></i>
+                                        <span>Shopping Cart</span>
+                                    </h3>
+                                </li>
+                                <li class="mini-cart-body">
+
+                                    {{-- if cart is empty --}}
+                                    <div class="empty-cart h-100 d-flex align-items-center">
+                                        <div class="text-center w-100">
+                                            <div class="mb-3"><i class="fa-regular fa-cart-shopping-fast empty-cart-icon-size"></i></div>
+                                            <div class="text-uppercase">Your Cart is empty.</div>
+                                        </div>
+                                    </div>
+
+                                    {{-- If cart has products --}}
+                                    <div class="mini-cart-items">
+                                        <a href="javascript:void(0)" class="mini-cart-item text-dark text-decoration-none">
+                                            <div>
+                                                <img src="{{asset('/assets/img/products/products.jpeg')}}" alt="product-image">
+                                            </div>
+                                            <div>
+                                                <div class="text-truncate">Product Name: Lorem ipsum dolor sit amet.</div>
+                                                <div class="d-flex gap-2 align-items-center text-primary">
+                                                    <div>
+                                                        <span class="fw-bold">Price: </span>
+                                                        <span>$12.00</span>
+                                                    </div>
+                                                    <div>-</div>
+                                                    <div>
+                                                        <span class="fw-bold">Quantity: </span>
+                                                        <span>1</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="mini-cart-item text-dark text-decoration-none">
+                                            <div>
+                                                <img src="{{asset('/assets/img/products/products.jpeg')}}" alt="product-image">
+                                            </div>
+                                            <div>
+                                                <div class="text-truncate">Product Name: Lorem ipsum dolor sit amet.</div>
+                                                <div class="d-flex gap-2 align-items-center text-primary">
+                                                    <div>
+                                                        <span class="fw-bold">Price: </span>
+                                                        <span>$12.00</span>
+                                                    </div>
+                                                    <div>-</div>
+                                                    <div>
+                                                        <span class="fw-bold">Quantity: </span>
+                                                        <span>1</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="mini-cart-item text-dark text-decoration-none">
+                                            <div>
+                                                <img src="{{asset('/assets/img/products/products.jpeg')}}" alt="product-image">
+                                            </div>
+                                            <div>
+                                                <div class="text-truncate">Product Name: Lorem ipsum dolor sit amet.</div>
+                                                <div class="d-flex gap-2 align-items-center text-primary">
+                                                    <div>
+                                                        <span class="fw-bold">Price: </span>
+                                                        <span>$12.00</span>
+                                                    </div>
+                                                    <div>-</div>
+                                                    <div>
+                                                        <span class="fw-bold">Quantity: </span>
+                                                        <span>1</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </li>
+                                <li class="mini-cart-footer d-flex align-items-center p-3 gap-3 bg-light border-top">
+                                    <a class="btn btn-sm w-100 rounded-0 btn-primary text-uppercase" href="#">Checkout</a>
+                                    <a class="btn btn-sm w-100 rounded-0 btn-outline-primary text-uppercase" href="#">View Cart</a>
+                                </li>
                             </ul>
                         </div>
                     </div>

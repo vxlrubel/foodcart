@@ -37,3 +37,17 @@ button:active{
     --bs-btn-disabled-bg: var(--fc_color-primary);
     --bs-btn-disabled-border-color: var(--fc_color-primary);
 }
+
+.btn-outline-primary {
+    --bs-btn-color: var(--fc_color-primary);
+    --bs-btn-border-color: var(--fc_color-primary);
+    --bs-btn-hover-bg: var(--fc_color-primary);
+    --bs-btn-hover-border-color: var(--fc_color-primary);
+    --bs-btn-active-bg: var(--fc_color-primary);
+    --bs-btn-active-border-color: var(--fc_color-primary);
+    --bs-btn-disabled-color: var(--fc_color-primary);
+    --bs-btn-disabled-border-color: var(--fc_color-primary);
+}
+.text-primary {
+    color: var(--fc_color-primary) !important;
+}
