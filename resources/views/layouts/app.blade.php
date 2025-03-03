@@ -28,9 +28,10 @@
     <body class="antialiased user-select-none">
         @include('layouts.navigation')
 
-        <main class="main-wrapper">
+        <main class="main-wrapper" id="app">
             @yield('content')
         </main>
+
         @include('layouts.footer')
 
 
