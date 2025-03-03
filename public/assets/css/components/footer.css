@@ -19,3 +19,42 @@
         padding-inline: 3rem;
     }
 }
+
+.footer-content{
+    background-color: hsla(var(--hue, 12), var(--saturation, 67%), var(--lightness, 23%), 0.05);
+}
+.social-icons{
+    --height-width: 2.225rem;
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: var(--height-width);
+        width: var(--height-width);
+        border: 2px solid var(--fc_color-primary);
+        background-color: var(--fc_color-primary);
+        color: white;
+        text-decoration: none;
+        border-radius: 3px;
+        transition: background-color 0.225s ease-in-out, color 0.2s ease-in-out;
+    }
+}
+.social-icons a:hover{
+    background-color: white;
+    color: var(--fc_color-primary);
+}
+.footer-list li:hover a{
+    transition: background-color 0.115s ease-in-out, color 0.115s ease-in-out;
+}
+.footer-list li:hover a{
+    color: var(--fc_color-primary) !important;
+}
+
+footer a:active,
+.footer-list li a:active{
+    color: var(--bs-cyan) !important;
+    background-color: transparent !important;
+}
+.copyright{
+    background-color: hsla(var(--hue, 12), var(--saturation, 67%), var(--lightness, 23%), 0.1);
+}
