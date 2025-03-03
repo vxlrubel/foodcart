@@ -10,13 +10,40 @@
 
 @endpush
 
+@push('style')
+    <link rel="stylesheet" href="{{asset('/assets/swiper/swiper-bundle.min.css')}}">
+@endpush
+
 @section('content')
 
 <section class="clearfix">
     <div class="container">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam distinctio culpa animi corrupti. Ex veritatis, ut, fuga vero similique, cum provident magni officia impedit nemo architecto quasi reprehenderit nam enim. <i class="fa-sharp-duotone fa-solid fa-bars"></i>
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide py-4">Slide 1</div>
+              <div class="swiper-slide py-4">Slide 2</div>
+              <div class="swiper-slide py-4">Slide 3</div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
     </div>
 </section>
 
 
 @endsection
+
+@push('script')
+<script src="{{asset('/assets/swiper/swiper-bundle.min.js')}}"></script>
+<script src="{{asset('/assets/js/pages/home.js')}}"></script>
+@endpush
