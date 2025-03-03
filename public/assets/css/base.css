@@ -12,7 +12,6 @@ body {
     min-height: 100dvh;
     font-weight: 400;
     font-size: var(--font-size-body);
-    background-color: hsl(0, 0%, 97%);
 }
 
 @media(width >= 1500px ){
