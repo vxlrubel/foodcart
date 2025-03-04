@@ -1,3 +1,8 @@
+.header-area{
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
 .primary-header-parent{
     --logo-width: 10rem;
     --last-item-width: 11rem;
@@ -112,8 +117,10 @@
 /* *************************************************** */
 /* *************************************************** */
 .secondary-header{
+    position: relative;
     background-color: var(--fc_color-primary);
     padding-block: .225rem;
+    z-index: 1030;
 }
 .category-menu{
     --category-button-width: 150px;
