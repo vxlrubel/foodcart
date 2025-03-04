@@ -12,31 +12,69 @@
 
 @push('style')
     <link rel="stylesheet" href="{{asset('/assets/swiper/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/pages/home.css')}}">
 @endpush
 
 @section('content')
 
 <section class="clearfix">
-    <div class="container">
-        <div class="swiper">
-            <!-- Additional required wrapper -->
+    <div class="container-fluid p-0">
+        <div class="swiper hero-slider">
             <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide py-4">Slide 1</div>
-              <div class="swiper-slide py-4">Slide 2</div>
-              <div class="swiper-slide py-4">Slide 3</div>
-              ...
+                <div class="swiper-slide hero-slider-item">
+                    <div class="parallax-bg" data-swiper-parallax="-50%" style="background-image: url('assets/img/hero-slider/image-1.jpeg')"></div>
+                    <div class="container">
+                        <div class="hero-slide-content-parent">
+                            <div class="hero-slide-content" data-swiper-parallax="-100">
+                                <h2 data-swiper-parallax="-200" class="fs-1 text-uppercase mb-0">Cookies</h2>
+                                <p data-swiper-parallax="-300" class="fs-5 text-capitalize fw-bold">Buy Best Food Here</p>
+                                <div  data-swiper-parallax="-400">
+                                    <a href="javascript:void(0)" class="btn btn-light rounded-0 btn-sm py-2 px-4"><i class="fa-regular fa-cart-shopping"></i> Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide hero-slider-item">
+                    <div class="parallax-bg" data-swiper-parallax="-50%" style="background-image: url('assets/img/hero-slider/image-2.jpeg')"></div>
+                    <div class="container">
+                        <div class="hero-slide-content-parent">
+                            <div class="hero-slide-content" data-swiper-parallax="-100">
+                                <h2 data-swiper-parallax="-200" class="fs-1 text-uppercase mb-0">Cookies</h2>
+                                <p data-swiper-parallax="-300" class="fs-5 text-capitalize fw-bold">Buy Best Food Here</p>
+                                <div  data-swiper-parallax="-400">
+                                    <a href="javascript:void(0)" class="btn btn-light rounded-0 btn-sm py-2 px-4"><i class="fa-regular fa-cart-shopping"></i> Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide hero-slider-item">
+                    <div class="parallax-bg" data-swiper-parallax="-50%" style="background-image: url('assets/img/hero-slider/image-3.jpeg')"></div>
+                    <div class="container">
+                        <div class="hero-slide-content-parent">
+                            <div class="hero-slide-content" data-swiper-parallax="-100">
+                                <h2 data-swiper-parallax="-200" class="fs-1 text-uppercase mb-0">Cookies</h2>
+                                <p data-swiper-parallax="-300" class="fs-5 text-capitalize fw-bold">Buy Best Food Here</p>
+                                <div  data-swiper-parallax="-400">
+                                    <a href="javascript:void(0)" class="btn btn-light rounded-0 btn-sm py-2 px-4"><i class="fa-regular fa-cart-shopping"></i> Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- If we need pagination -->
+            <!-- pagination buttons -->
             <div class="swiper-pagination"></div>
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-          </div>
+            {{-- progressbar --}}
+            <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+            </div>
+        </div>
     </div>
 </section>
 
