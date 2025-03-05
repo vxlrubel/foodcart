@@ -3,6 +3,10 @@
     <div class="subscribe-us bg-white">
         <div class="container">
             <form action="javascript:void(0)" class="fc-subscribe-form">
+                <h4 class="fs-5 text-uppercase mb-1">Subscribe us</h4>
+                <div class="mb-2 small">
+                    Stay updated with our latest deals and exclusive offers! Subscribe to our newsletter by entering your email below.
+                </div>
                 <div class="input-group border">
                     <span class="input-group-text rounded-0 border-0">@</span>
                     <input type="email" class="form-control rounded-0 shadow-none border-0 small py-2" placeholder="Email Address">
