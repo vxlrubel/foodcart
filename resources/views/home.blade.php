@@ -101,7 +101,7 @@
                             <button class="btn btn-sm btn-primary rounded-1">
                                 <i class="fa-regular fa-arrow-right-arrow-left"></i>
                             </button>
-                            <button class="btn btn-sm btn-primary rounded-1">
+                            <button class="btn btn-sm btn-primary rounded-1" @click.prevent="showProductDetails">
                                 <i class="fa-regular fa-eye"></i>
                             </button>
                         </div>
@@ -126,6 +126,32 @@
 </section>
 {{-- new product end --}}
 
+
+
+
+        {{-- Modal Area --}}
+<div class="modal fade" id="showproductdetails" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content rounded-0">
+            <div class="modal-header py-2 bg-light">
+                <h1 class="modal-title fs-5">Product Details</h1>
+                <button type="button" class="btn-close shadow-none bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="{{asset('/assets/img/new-products/pink-butterfly-cake_415.jpeg')}}" alt="" class="w-100">
+                    </div>
+                    <div class="col-sm-6">
+                        <h2 class="fs-5">Product title here</h2>
+                        <p>Product descritption: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quidem at delectus repellat! Praesentium nulla molestias esse. Nam neque et assumenda, laborum modi nisi laboriosam?</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 @endsection

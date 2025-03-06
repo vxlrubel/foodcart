@@ -83,6 +83,10 @@ const App = Vue.createApp({
                     },
                 }
             });
+        },
+        showProductDetails(){
+            const productDetails = new bootstrap.Modal(document.getElementById('showproductdetails'));
+            productDetails.show();
         }
     },
     mounted() {

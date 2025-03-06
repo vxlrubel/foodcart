@@ -25,6 +25,9 @@ button:active{
     background-color: var(--fc_color-primary) !important;
     color: white !important;
 }
+.modal .btn-close:active{
+    background-color: transparent !important;
+}
 
 .btn-primary {
     --bs-btn-bg: var(--fc_color-primary);
