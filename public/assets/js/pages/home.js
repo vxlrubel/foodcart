@@ -1,7 +1,7 @@
 const App = Vue.createApp({
     data() {
         return {
-            toggleSubmenu: false,
+            collectionStatus: '',
             products : []
         };
     },
@@ -87,11 +87,45 @@ const App = Vue.createApp({
         showProductDetails(){
             const productDetails = new bootstrap.Modal(document.getElementById('showproductdetails'));
             productDetails.show();
+        },
+        newCollectionClass( getStatus ){
+            console.log( getStatus )
+            this.collectionStatus = getStatus;
         }
     },
     mounted() {
         this.heroSlider();
         this.fetchNewProducts();
+        swiper = new Swiper(".new-collectio-products", {
+            grid: {
+              rows: 2,
+            },
+            spaceBetween: 10,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            breakpoints: {
+                300: {
+                  slidesPerView: 2,
+                  grid: {
+                    rows: 2,
+                  },
+                },
+                768: {
+                  slidesPerView: 3,
+                  grid: {
+                    rows: 2,
+                  },
+                },
+                992: {
+                  slidesPerView: 4,
+                  grid: {
+                    rows: 2,
+                  },
+                },
+            }
+        });
     },
 });
 

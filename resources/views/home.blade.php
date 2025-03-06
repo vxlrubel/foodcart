@@ -127,6 +127,43 @@
 {{-- new product end --}}
 
 
+{{-- new collection start --}}
+<section class="clearfix py-4 py-lg-5">
+    <div class="container">
+        <div class="row" style="--bs-gutter-x: 1rem; --bs-gutter-y: 1rem;">
+            <div class="col-lg-3">
+                <img src="{{asset('/assets/img/new-products/pink-butterfly-cake_415.jpeg')}}" alt="" class="w-100">
+            </div>
+            <div class="col-lg-9 new-collenction">
+
+                <div class="d-flex align-items-center gap-3 pb-2 border-bottom border-primary mb-3">
+                    <div class="text-uppercase fs-5">New Collection</div>
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="btn btn-sm btn-outline-primary rounded-0 text-uppercase" :class="collectionStatus == 'new-collection' ? 'active' : ''" @click.prevent="newCollectionClass( 'new-collection' )">New collection</button>
+                        <button class="btn btn-sm btn-outline-primary rounded-0 text-uppercase" :class="collectionStatus == 'best-selles' ? 'active' : ''" @click.prevent="newCollectionClass( 'best-selles' )">Best sells</button>
+                    </div>
+                </div>
+                <div class="swiper new-collectio-products mb-5">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">Slide 1</div>
+                      <div class="swiper-slide">Slide 2</div>
+                      <div class="swiper-slide">Slide 3</div>
+                      <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div>
+                      <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    {{-- <div class="swiper-pagination"></div> --}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{-- new collection end --}}
+
 
 
         {{-- Modal Area --}}
