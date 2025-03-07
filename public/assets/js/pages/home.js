@@ -170,10 +170,6 @@ const App = Vue.createApp({
               rows: 2,
             },
             spaceBetween: 10,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
             breakpoints: {
                 300: {
                   slidesPerView: 2,
