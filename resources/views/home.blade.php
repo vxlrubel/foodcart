@@ -188,7 +188,7 @@
 {{-- featured category end --}}
 
 <section class="clearfix py-4 py-lg-5 bg-light">
-    <div class="container">
+    <div class="container py-xl-4">
         <div class="row" style="--bs-gutter-x: 1rem; --bs-gutter-y: 1rem;">
             <div class="col-sm-6 col-lg-3">
                 <div class="border p-3 bg-white rounded-2 h-100">
