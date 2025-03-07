@@ -196,3 +196,9 @@
 .category-item:active span.position-absolute{
     background-color: hsla(0, 0%, 0%,0.15);
 }
+.clearfix:has(.promo-products-slider){
+    background-image: url('../../img/promo-product-slider/Promotion-slider-bg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}

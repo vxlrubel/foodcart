@@ -186,6 +186,88 @@
 </section>
 {{-- featured category end --}}
 
+<section class="clearfix py-4 py-lg-5">
+    <div class="container py-xl-4">
+        <div class="swiper promo-products-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide bg-white rounded-2 overflow-hidden">
+                    <div class="ratio ratio-4x3 overflow-hidden">
+                        <div>
+                            <img src="{{asset('/assets/img/promo-product-slider/Promotion-products-4.jpeg')}}" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="p-3 text-center">
+                        <h3 class="fs-2 text-uppercase mb-0">Pink Glazed</h3>
+                        <div class="text-capitalize fs-5">Buy the best food here</div>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-primary rounded-1 py-2 px-4 mt-3"><i class="fa-regular fa-cart-shopping"></i> Shop Now</a>
+                    </div>
+                </div>
+                <div class="swiper-slide bg-white rounded-2 overflow-hidden">
+                    <div class="ratio ratio-4x3 overflow-hidden">
+                        <div>
+                            <img src="{{asset('/assets/img/promo-product-slider/Promotion-products-3.jpeg')}}" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="p-3 text-center">
+                        <h3 class="fs-2 text-uppercase mb-0">Fresh cookies</h3>
+                        <div class="text-capitalize fs-5">Buy the best food here</div>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-primary rounded-1 py-2 px-4 mt-3"><i class="fa-regular fa-cart-shopping"></i> Shop Now</a>
+                    </div>
+                </div>
+                <div class="swiper-slide bg-white rounded-2 overflow-hidden">
+                    <div class="ratio ratio-4x3 overflow-hidden">
+                        <div>
+                            <img src="{{asset('/assets/img/promo-product-slider/Promotion-products-3.jpeg')}}" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="p-3 text-center">
+                        <h3 class="fs-2 text-uppercase mb-0">Pieces Cake</h3>
+                        <div class="text-capitalize fs-5">Buy the best food here</div>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-primary rounded-1 py-2 px-4 mt-3"><i class="fa-regular fa-cart-shopping"></i> Shop Now</a>
+                    </div>
+                </div>
+                <div class="swiper-slide bg-white rounded-2 overflow-hidden">
+                    <div class="ratio ratio-4x3 overflow-hidden">
+                        <div>
+                            <img src="{{asset('/assets/img/promo-product-slider/Promotion-products-4.jpeg')}}" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="p-3 text-center">
+                        <h3 class="fs-2 text-uppercase mb-0">Pink Glazed</h3>
+                        <div class="text-capitalize fs-5">Buy the best food here</div>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-primary rounded-1 py-2 px-4 mt-3"><i class="fa-regular fa-cart-shopping"></i> Shop Now</a>
+                    </div>
+                </div>
+                <div class="swiper-slide bg-white rounded-2 overflow-hidden">
+                    <div class="ratio ratio-4x3 overflow-hidden">
+                        <div>
+                            <img src="{{asset('/assets/img/promo-product-slider/Promotion-products-3.jpeg')}}" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="p-3 text-center">
+                        <h3 class="fs-2 text-uppercase mb-0">Fresh cookies</h3>
+                        <div class="text-capitalize fs-5">Buy the best food here</div>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-primary rounded-1 py-2 px-4 mt-3"><i class="fa-regular fa-cart-shopping"></i> Shop Now</a>
+                    </div>
+                </div>
+                <div class="swiper-slide bg-white rounded-2 overflow-hidden">
+                    <div class="ratio ratio-4x3 overflow-hidden">
+                        <div>
+                            <img src="{{asset('/assets/img/promo-product-slider/Promotion-products-3.jpeg')}}" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="p-3 text-center">
+                        <h3 class="fs-2 text-uppercase mb-0">Pieces Cake</h3>
+                        <div class="text-capitalize fs-5">Buy the best food here</div>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-primary rounded-1 py-2 px-4 mt-3"><i class="fa-regular fa-cart-shopping"></i> Shop Now</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
 {{-- blog section --}}
 <section class="clearfix py-4 py-lg-5">
     <div class="container py-xl-4">

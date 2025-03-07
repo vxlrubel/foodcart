@@ -158,6 +158,29 @@ const App = Vue.createApp({
                 breakpoints: configureBreakpoints
             }
             new Swiper( '.menufacturers-slider', config );
+        },
+        promoProductSlider(){
+            new Swiper('.promo-products-slider', {
+                loop: true,
+                speed: 1000,
+                spaceBetween : 10,
+                freeMode: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    768: {
+                      slidesPerView: 2
+                    },
+                    992: {
+                      slidesPerView: 3
+                    },
+                    1400: {
+                      slidesPerView: 4
+                    }
+                }
+            });
         }
     },
     mounted() {
@@ -165,6 +188,7 @@ const App = Vue.createApp({
         this.fetchNewProducts();
         this.fetchFeaturedCategories();
         this.menufacturerSlider();
+        this.promoProductSlider();
         new Swiper(".new-collectio-products", {
             grid: {
               rows: 2,
