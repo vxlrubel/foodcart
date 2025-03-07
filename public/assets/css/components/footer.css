@@ -7,9 +7,11 @@
     background-color: hsl(0, 0%, 95%);
     margin-inline: auto;
     max-width: 540px;
+    transition: transform 0.325s ease-in-out;
 }
 .fc-subscribe-form:has(:focus){
     background-color: hsla(var(--hue), var(--saturation), var(--lightness), 0.1);
+    transform: scale(1.125) translateY(-25px);
 }
 @media(width >= 768px){
     .subscribe-us{
