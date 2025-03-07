@@ -187,6 +187,73 @@
 </section>
 {{-- featured category end --}}
 
+<section class="clearfix py-4 py-lg-5">
+    <div class="container py-xl-4">
+        <div class="header-title">
+            <h4 class="fs-4 text-uppercase">latest blog</h4>
+            <div><a href="javascript:void(0)" class="text-decoration-none d-inline-block text-primary text-uppercase"><i class="fa-solid fa-link"></i> View all Posts</a></div>
+        </div>
+
+        <div class="row" style="--bs-gutter-x: 1rem; --bs-gutter-y: 1rem;">
+            <div class="col-sm-6 col-lg-3">
+                <div class="border rounded-2 overflow-hidden">
+                    <div class="ratio ratio-4x3">
+                        <div>
+                            <img src="{{asset('/assets/img/blogs/convincing-the-potential-customers-to-buy_400.png')}}" alt="" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="p-3 p-md-4 bg-light">
+                        <div class="text-primary small">January 26, 2025(0)</div>
+                        <a href="javascript:void(0)" class="d-block text-dark text-decoration-none fs-5 m-0 text-truncate">Convincing the potential customers to buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="border rounded-2 overflow-hidden">
+                    <div class="ratio ratio-4x3">
+                        <div>
+                            <img src="{{asset('/assets/img/blogs/why-your-online-store-needs-a-wish-list_400.png')}}" alt="" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="p-3 p-md-4 bg-light">
+                        <div class="text-primary small">January 25, 2025(0)</div>
+                        <a href="javascript:void(0)" class="d-block text-dark text-decoration-none fs-5 m-0 text-truncate">Why your online store needs a wish list</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="border rounded-2 overflow-hidden">
+                    <div class="ratio ratio-4x3">
+                        <div>
+                            <img src="{{asset('/assets/img/blogs/how-a-blog-can-help-your-growing-e-commerce-business_400.png')}}" alt="" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="p-3 p-md-4 bg-light">
+                        <div class="text-primary small">January 25, 2025(0)</div>
+                        <a href="javascript:void(0)" class="d-block text-dark text-decoration-none fs-5 m-0 text-truncate">How a blog can help your growing e-Commerce business</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="border rounded-2 overflow-hidden">
+                    <div class="ratio ratio-4x3">
+                        <div>
+                            <img src="{{asset('/assets/img/blogs/convincing-the-potential-customers-to-buy_400.png')}}" alt="" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="p-3 p-md-4 bg-light">
+                        <div class="text-primary small">January 26, 2025(0)</div>
+                        <a href="javascript:void(0)" class="d-block text-dark text-decoration-none fs-5 m-0 text-truncate">Convincing the potential customers to buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+{{-- support section --}}
 <section class="clearfix py-4 py-lg-5 bg-light">
     <div class="container py-xl-4">
         <div class="row" style="--bs-gutter-x: 1rem; --bs-gutter-y: 1rem;">
@@ -245,6 +312,7 @@
         </div>
     </div>
 </section>
+{{-- support section end --}}
 
 {{-- Modal Area --}}
 <div class="modal fade" id="showproductdetails" tabindex="-1" aria-hidden="true">
