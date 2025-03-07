@@ -165,6 +165,27 @@
 {{-- new collection end --}}
 
 
+<section class="clearfix py-4 py-lg-5">
+    <div class="container py-xl-4">
+        <div class="header-title">
+            <h4 class="fs-4 text-uppercase">Featured Categories</h4>
+            <div>6 items</div>
+        </div>
+        <div class="swiper featured-categories">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" v-for="(category, index) in categories" :key="category.id">
+                <a href="javascript:void(0)" class="d-block w-100 position-relative category-item text-dark text-decoration-none rounded-2 overflow-hidden">
+                    <img :src="'assets/img/new-products/' + category.image" alt="" class="img-fluid" v-if="category.image">
+                    <img src="{{asset('/assets/img/new-products/placeholder.jpg')}}" alt="" class="img-fluid" v-else>
+                    <span class="position-absolute end-0 start-0 bottom-0 px-3 py-2 d-block text-truncate small text-uppercase">@{{category.name}}</span>
+                </a>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
         {{-- Modal Area --}}
 <div class="modal fade" id="showproductdetails" tabindex="-1" aria-hidden="true">

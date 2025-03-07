@@ -2,7 +2,8 @@ const App = Vue.createApp({
     data() {
         return {
             collectionStatus: '',
-            products : []
+            products : [],
+            categories: [],
         };
     },
     methods: {
@@ -91,11 +92,47 @@ const App = Vue.createApp({
         newCollectionClass( getStatus ){
             console.log( getStatus )
             this.collectionStatus = getStatus;
+        },
+        async fetchFeaturedCategories(){
+            const response = await axios.get("assets/data/products.json");
+            this.categories = response.data;
+            this.$nextTick(this.initFeaturedCategories);
+
+        },
+        initFeaturedCategories(){
+            new Swiper(".featured-categories", {
+                loop: true,
+                speed: 1000,
+                spaceBetween : 10,
+                freeMode: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    300: {
+                      slidesPerView: 2
+                    },
+                    768: {
+                      slidesPerView: 4
+                    },
+                    992: {
+                      slidesPerView: 5
+                    },
+                    1200: {
+                      slidesPerView: 6
+                    },
+                    1400: {
+                      slidesPerView: 7
+                    },
+                }
+            });
         }
     },
     mounted() {
         this.heroSlider();
         this.fetchNewProducts();
+        this.fetchFeaturedCategories();
         swiper = new Swiper(".new-collectio-products", {
             grid: {
               rows: 2,
