@@ -165,6 +165,7 @@
 {{-- new collection end --}}
 
 
+{{-- featured category1 --}}
 <section class="clearfix py-4 py-lg-5">
     <div class="container py-xl-4">
         <div class="header-title">
@@ -184,10 +185,68 @@
         </div>
     </div>
 </section>
+{{-- featured category end --}}
 
+<section class="clearfix py-4 py-lg-5 bg-light">
+    <div class="container">
+        <div class="row" style="--bs-gutter-x: 1rem; --bs-gutter-y: 1rem;">
+            <div class="col-sm-6 col-lg-3">
+                <div class="border p-3 bg-white rounded-2 h-100">
+                    <div class="row align-items-center" style="--bs-gutter-x: 1rem;">
+                        <div class="col-3">
+                            <img src="{{asset('/assets/img/supports/1.png')}}" class="w-100">
+                        </div>
+                        <div class="col-9">
+                            <h4 class="fs-5 text-capitalize mb-1">Support 24/7</h4>
+                            <span class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="border p-3 bg-white rounded-2 h-100">
+                    <div class="row align-items-center" style="--bs-gutter-x: 1rem;">
+                        <div class="col-3">
+                            <img src="{{asset('/assets/img/supports/2.png')}}" class="w-100">
+                        </div>
+                        <div class="col-9">
+                            <h4 class="fs-5 text-capitalize mb-1">30 Day Return Policy</h4>
+                            <span class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="border p-3 bg-white rounded-2 h-100">
+                    <div class="row align-items-center" style="--bs-gutter-x: 1rem;">
+                        <div class="col-3">
+                            <img src="{{asset('/assets/img/supports/3.png')}}" class="w-100">
+                        </div>
+                        <div class="col-9">
+                            <h4 class="fs-5 text-capitalize mb-1">Worldwide Shipping</h4>
+                            <span class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="border p-3 bg-white rounded-2 h-100">
+                    <div class="row align-items-center" style="--bs-gutter-x: 1rem;">
+                        <div class="col-3">
+                            <img src="{{asset('/assets/img/supports/4.png')}}" class="w-100">
+                        </div>
+                        <div class="col-9">
+                            <h4 class="fs-5 text-capitalize mb-1">Free Delivery</h4>
+                            <span class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-
-        {{-- Modal Area --}}
+{{-- Modal Area --}}
 <div class="modal fade" id="showproductdetails" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
         <div class="modal-content rounded-0">
