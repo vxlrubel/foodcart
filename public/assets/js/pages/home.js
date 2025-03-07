@@ -127,13 +127,45 @@ const App = Vue.createApp({
                     },
                 }
             });
+        },
+        menufacturerSlider(){
+            const configureBreakpoints = {
+                300: {
+                    slidesPerView: 2
+                },
+                768: {
+                    slidesPerView: 3
+                },
+                992: {
+                    slidesPerView: 4
+                },
+                1200: {
+                    slidesPerView: 5
+                },
+                1400: {
+                    slidesPerView: 6
+                },
+            }
+            const config = {
+                loop: true,
+                speed: 1000,
+                spaceBetween : 10,
+                freeMode: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: configureBreakpoints
+            }
+            new Swiper( '.menufacturers-slider', config );
         }
     },
     mounted() {
         this.heroSlider();
         this.fetchNewProducts();
         this.fetchFeaturedCategories();
-        swiper = new Swiper(".new-collectio-products", {
+        this.menufacturerSlider();
+        new Swiper(".new-collectio-products", {
             grid: {
               rows: 2,
             },

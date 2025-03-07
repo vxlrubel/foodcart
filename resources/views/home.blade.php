@@ -187,6 +187,7 @@
 </section>
 {{-- featured category end --}}
 
+{{-- blog section --}}
 <section class="clearfix py-4 py-lg-5">
     <div class="container py-xl-4">
         <div class="header-title">
@@ -251,7 +252,33 @@
 
     </div>
 </section>
+{{-- blog section end --}}
 
+{{-- menufacturers start --}}
+<section class="clearfix py-4 py-lg-5" style="background-color: hsla(var(--hue, 12), var(--saturation, 67%), var(--lightness, 23%), 0.05);">
+    <div class="container py-xl-4">
+        <div class="header-title">
+            <h4 class="fs-4 text-uppercase">Manufacturers</h4>
+            <div>( 1 Items )</div>
+        </div>
+
+        <div class="swiper menufacturers-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide border p-3 bg-white rounded-2 overflow-hidden" v-for="(item, index) in Array.from({ length: 16 })" :key="index">
+                    <div class="ratio ratio-21x9">
+                        <div class="d-flex align-items-center">
+                            <img src="/assets/img/sandra-foods_415.jpeg" class="d-block w-100">
+                        </div>
+                    </div>
+                    <hr>
+                    <a href="javascript:void(0)" class="btn btn-primary btn-sm rounded-1 d-block w-100 py-2">Sandra foods</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{{-- menufacturers end --}}
 
 {{-- support section --}}
 <section class="clearfix py-4 py-lg-5 bg-light">
