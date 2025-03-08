@@ -4,6 +4,11 @@ const App = Vue.createApp({
             collectionStatus: '',
             products : [],
             categories: [],
+            getProducts: [],
+            filteredProducts: [],
+            swiper: null,
+            statuses: ["new collection", "best sells", "fresh eats"],
+            activeStatus: null,
         };
     },
     methods: {
@@ -181,6 +186,51 @@ const App = Vue.createApp({
                     }
                 }
             });
+        },
+        async fetchProduct2(){
+            const response = await axios.get('assets/data/products-2.json');
+            this.getProducts = response.data.products;
+            this.filteredProducts = this.getProducts;
+            this.$nextTick(() => this.initProduct2Swiper());
+        },
+        initProduct2Swiper(){
+            this.swiper = new Swiper('.product-slider2', {
+                loop: true,
+                spaceBetween: 10,
+                freeMode: true,
+                navigation: {
+                    nextEl: '.next-slide',
+                    prevEl: '.prev-slide'
+                },
+                breakpoints: {
+                    576: {
+                      slidesPerView: 2
+                    },
+                    768: {
+                      slidesPerView: 3
+                    },
+                    1200: {
+                      slidesPerView: 4
+                    }
+                }
+            });
+        },
+        filterProducts(status) {
+            this.activeStatus = status; // Update active status
+            this.filteredProducts = this.getProducts.filter(product => product.status === status);
+            this.updateSwiper();
+        },
+        formatStatus(status) {
+            return status.charAt(0).toUpperCase() + status.slice(1);
+        },
+        updateSwiper() {
+            this.$nextTick(() => this.swiper.update());
+        },
+        prevSlide() {
+            this.swiper.slidePrev();
+        },
+        nextSlide() {
+            this.swiper.slideNext();
         }
     },
     mounted() {
@@ -189,6 +239,8 @@ const App = Vue.createApp({
         this.fetchFeaturedCategories();
         this.menufacturerSlider();
         this.promoProductSlider();
+        this.fetchProduct2();
+
         new Swiper(".new-collectio-products", {
             grid: {
               rows: 2,

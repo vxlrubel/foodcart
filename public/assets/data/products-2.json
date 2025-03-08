@@ -1,0 +1,130 @@
+{
+    "products": [
+      {
+        "name": "Organic Apple",
+        "price": 2.5,
+        "image": "images/apple.jpg",
+        "status": "fresh eats"
+      },
+      {
+        "name": "Leather Wallet",
+        "price": 45.0,
+        "image": "images/wallet.jpg",
+        "status": "new collection"
+      },
+      {
+        "name": "Wireless Headphones",
+        "price": 120.99,
+        "image": "images/headphones.jpg",
+        "status": "best sells"
+      },
+      {
+        "name": "Banana",
+        "price": 1.2,
+        "image": "images/banana.jpg",
+        "status": "fresh eats"
+      },
+      {
+        "name": "Cotton T-Shirt",
+        "price": 25.0,
+        "image": "images/tshirt.jpg",
+        "status": "new collection"
+      },
+      {
+        "name": "Smartwatch",
+        "price": 199.99,
+        "image": "images/smartwatch.jpg",
+        "status": "best sells"
+      },
+      {
+        "name": "Orange Juice",
+        "price": 3.0,
+        "image": "images/orange-juice.jpg",
+        "status": "fresh eats"
+      },
+      {
+        "name": "Denim Jeans",
+        "price": 55.5,
+        "image": "images/jeans.jpg",
+        "status": "new collection"
+      },
+      {
+        "name": "Gaming Mouse",
+        "price": 49.99,
+        "image": "images/mouse.jpg",
+        "status": "best sells"
+      },
+      {
+        "name": "Strawberry",
+        "price": 5.0,
+        "image": "images/strawberry.jpg",
+        "status": "fresh eats"
+      },
+      {
+        "name": "Leather Belt",
+        "price": 30.0,
+        "image": "images/belt.jpg",
+        "status": "new collection"
+      },
+      {
+        "name": "Bluetooth Speaker",
+        "price": 75.99,
+        "image": "images/speaker.jpg",
+        "status": "best sells"
+      },
+      {
+        "name": "Avocado",
+        "price": 2.8,
+        "image": "images/avocado.jpg",
+        "status": "fresh eats"
+      },
+      {
+        "name": "Casual Sneakers",
+        "price": 65.0,
+        "image": "images/sneakers.jpg",
+        "status": "new collection"
+      },
+      {
+        "name": "Portable Charger",
+        "price": 39.99,
+        "image": "images/charger.jpg",
+        "status": "best sells"
+      },
+      {
+        "name": "Mango",
+        "price": 3.5,
+        "image": "images/mango.jpg",
+        "status": "fresh eats"
+      },
+      {
+        "name": "Leather Handbag",
+        "price": 90.0,
+        "image": "images/handbag.jpg",
+        "status": "new collection"
+      },
+      {
+        "name": "Fitness Tracker",
+        "price": 55.99,
+        "image": "images/tracker.jpg",
+        "status": "best sells"
+      },
+      {
+        "name": "Pineapple",
+        "price": 4.0,
+        "image": "images/pineapple.jpg",
+        "status": "fresh eats"
+      },
+      {
+        "name": "Hoodie Jacket",
+        "price": 80.0,
+        "image": "images/hoodie.jpg",
+        "status": "new collection"
+      },
+      {
+        "name": "Noise Cancelling Earbuds",
+        "price": 99.99,
+        "image": "images/earbuds.jpg",
+        "status": "best sells"
+      }
+    ]
+  }

@@ -202,3 +202,26 @@
     background-position: center center;
     background-size: cover;
 }
+
+
+/* collection product */
+.collection-product{
+    --space-between: 1rem;
+    --image-width: 100%;
+    --slider-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-between);
+}
+@media(width >= 768px){
+    .collection-product{
+        --image-width: 300px;
+        --slider-width: calc(100% - calc(var(--image-width) + var(--space-between)));
+    }
+}
+.collection-product > div:nth-child(1){
+    width: var(--image-width);
+}
+.collection-product > div:nth-child(2){
+    width: var(--slider-width);
+}
