@@ -128,33 +128,55 @@
 
 
 {{-- new collection start --}}
-<section class="clearfix py-4 py-lg-5">
-    <div class="container">
-        <div class="row" style="--bs-gutter-x: 1rem; --bs-gutter-y: 1rem;">
-            <div class="col-lg-3">
+<section class="clearfix py-4 py-lg-5 bg-light">
+    <div class="container py-xl-4">
+        <div class="collection-product">
+            <div>
                 <img src="{{asset('/assets/img/new-products/pink-butterfly-cake_415.jpeg')}}" alt="" class="w-100">
             </div>
-            <div class="col-lg-9 new-collenction">
-
-                <div class="d-flex align-items-center gap-3 pb-2 border-bottom border-primary mb-3">
-                    <div class="text-uppercase fs-5">New Collection</div>
-                    <div class="d-flex align-items-center gap-2">
-                        <button class="btn btn-sm btn-outline-primary rounded-0 text-uppercase" :class="collectionStatus == 'new-collection' ? 'active' : ''" @click.prevent="newCollectionClass( 'new-collection' )">New collection</button>
-                        <button class="btn btn-sm btn-outline-primary rounded-0 text-uppercase" :class="collectionStatus == 'best-selles' ? 'active' : ''" @click.prevent="newCollectionClass( 'best-selles' )">Best sells</button>
+            <div>
+                <div class="border-bottom pb-2 border-primary mb-3">
+                    <div class="d-flex gap-2">
+                        <div class="text-uppercase">New Collection</div>
+                        <div class="d-flex gap-2 justify-content-between" style="width: calc(100% - 50px)">
+                            <div class="d-flex flex-wrap gap-2">
+                                <button
+                                    v-for="(status, index) in statuses.slice(0, 2)"
+                                    class="btn btn-sm py-2 px-3 rounded-0 btn-outline-primary text-capitalize"
+                                    :key="index"
+                                    @click="filterProducts(status)"
+                                    :class="['filter-btn', { active: activeStatus === status }]"
+                                >
+                                    @{{ formatStatus(status) }}
+                                </button>
+                            </div>
+                            <div class="d-flex align-items-center gap-1">
+                                <button class="btn btn-primary btn-sm rounded-0 py-2 px-3 prev-slide" @click="prevSlide"><i class="fa-regular fa-chevron-left"></i></button>
+                                <button class="btn btn-primary btn-sm rounded-0 py-2 px-3 next-slide" @click="nextSlide"><i class="fa-regular fa-chevron-right"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="swiper new-collectio-products mb-5">
+                <div class="swiper product-slider2">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide">Slide 1</div>
-                      <div class="swiper-slide">Slide 2</div>
-                      <div class="swiper-slide">Slide 3</div>
-                      <div class="swiper-slide">Slide 4</div>
-                      <div class="swiper-slide">Slide 5</div>
-                      <div class="swiper-slide">Slide 6</div>
-                      <div class="swiper-slide">Slide 7</div>
-                      <div class="swiper-slide">Slide 8</div>
-                      <div class="swiper-slide">Slide 9</div>
-                      <div class="swiper-slide">Slide 9</div>
+                        <div class="swiper-slide border bg-white" v-for="product in filteredProducts" :key="product.name">
+                            <div class="ratio ratio-16x9">
+                                <div class="overflow-hidden bg-light">
+                                    <img :src="product.image" :alt="product.name" class="product-image">
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <a href="javascript:void(0)" class="text-dark text-decoration-none text-uppercase d-block text-truncate">@{{ product.name }}</a>
+                                <div class="fw-bold small">৳</span>@{{ parseFloat(product.price).toFixed(2) }}</div>
+                                <div class="d-flex align-items-center gap-1 small mb-2">
+                                    <i class="fa-light fa-star"></i>
+                                    <i class="fa-light fa-star"></i>
+                                    <i class="fa-light fa-star"></i>
+                                    <i class="fa-light fa-star"></i>
+                                    <i class="fa-light fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -162,7 +184,6 @@
     </div>
 </section>
 {{-- new collection end --}}
-
 
 {{-- featured category1 --}}
 <section class="clearfix py-4 py-lg-5">
@@ -267,6 +288,67 @@
         </div>
     </div>
 </section>
+
+{{-- summer collection start --}}
+
+<section class="clearfix py-4 py-lg-5" style="background-color: hsla(var(--hue, 12), var(--saturation, 67%), var(--lightness, 23%), 0.05)">
+    <div class="container py-xl-4">
+        <div class="collection-product">
+            <div>
+                <img src="{{asset('/assets/img/new-products/pink-butterfly-cake_415.jpeg')}}" alt="" class="w-100">
+            </div>
+            <div>
+                <div class="border-bottom pb-2 border-primary mb-3">
+                    <div class="d-flex gap-2">
+                        <div class="text-uppercase">summer collection</div>
+                        <div class="d-flex gap-2 justify-content-between" style="width: calc(100% - 50px)">
+                            <div class="d-flex flex-wrap gap-2">
+                                <button
+                                    v-for="(status, index) in statuses"
+                                    class="btn btn-sm py-2 px-3 rounded-0 btn-outline-primary text-capitalize"
+                                    :key="index"
+                                    @click="filterProducts(status)"
+                                    :class="['filter-btn', { active: activeStatus === status }]"
+                                >
+                                    @{{ formatStatus(status) }}
+                                </button>
+                            </div>
+                            <div class="d-flex align-items-center gap-1">
+                                <button class="btn btn-primary btn-sm rounded-0 py-2 px-3 prev-slide" @click="prevSlide"><i class="fa-regular fa-chevron-left"></i></button>
+                                <button class="btn btn-primary btn-sm rounded-0 py-2 px-3 next-slide" @click="nextSlide"><i class="fa-regular fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper product-slider2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide border bg-white" v-for="product in filteredProducts" :key="product.name">
+                            <div class="ratio ratio-16x9">
+                                <div class="overflow-hidden bg-light">
+                                    <img :src="product.image" :alt="product.name" class="product-image">
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <a href="javascript:void(0)" class="text-dark text-decoration-none text-uppercase d-block text-truncate">@{{ product.name }}</a>
+                                <div class="fw-bold small">৳</span>@{{ parseFloat(product.price).toFixed(2) }}</div>
+                                <div class="d-flex align-items-center gap-1 small mb-2">
+                                    <i class="fa-light fa-star"></i>
+                                    <i class="fa-light fa-star"></i>
+                                    <i class="fa-light fa-star"></i>
+                                    <i class="fa-light fa-star"></i>
+                                    <i class="fa-light fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+{{-- summer collection end --}}
 
 {{-- blog section --}}
 <section class="clearfix py-4 py-lg-5">
@@ -447,63 +529,6 @@
 </div>
 
 
-<section class="clearfix py-4 py-lg-5" style="background-color: hsla(var(--hue, 12), var(--saturation, 67%), var(--lightness, 23%), 0.05)">
-    <div class="container py-xl-4">
-        <div class="collection-product">
-            <div>
-                <img src="{{asset('/assets/img/new-products/pink-butterfly-cake_415.jpeg')}}" alt="" class="w-100">
-            </div>
-            <div>
-                <div class="border-bottom pb-2 border-primary mb-3">
-                    <div class="d-flex gap-2">
-                        <div class="text-uppercase">New Collection</div>
-                        <div class="d-flex gap-2 justify-content-between" style="width: calc(100% - 50px)">
-                            <div class="d-flex flex-wrap gap-2">
-                                <button
-                                    v-for="(status, index) in statuses"
-                                    class="btn btn-sm py-2 px-3 rounded-0 btn-outline-primary text-capitalize"
-                                    :key="index"
-                                    @click="filterProducts(status)"
-                                    :class="['filter-btn', { active: activeStatus === status }]"
-                                >
-                                    @{{ formatStatus(status) }}
-                                </button>
-                            </div>
-                            <div class="d-flex align-items-center gap-1">
-                                <button class="btn btn-primary btn-sm rounded-0 py-2 px-3 prev-slide" @click="prevSlide"><i class="fa-regular fa-chevron-left"></i></button>
-                                <button class="btn btn-primary btn-sm rounded-0 py-2 px-3 next-slide" @click="nextSlide"><i class="fa-regular fa-chevron-right"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper product-slider2">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide border bg-white" v-for="product in filteredProducts" :key="product.name">
-                            <div class="ratio ratio-16x9">
-                                <div class="overflow-hidden bg-light">
-                                    <img :src="product.image" :alt="product.name" class="product-image">
-                                </div>
-                            </div>
-                            <div class="p-3">
-                                <a href="javascript:void(0)" class="text-dark text-decoration-none text-uppercase d-block text-truncate">@{{ product.name }}</a>
-                                <div class="fw-bold small">৳</span>@{{ parseFloat(product.price).toFixed(2) }}</div>
-                                <div class="d-flex align-items-center gap-1 small mb-2">
-                                    <i class="fa-light fa-star"></i>
-                                    <i class="fa-light fa-star"></i>
-                                    <i class="fa-light fa-star"></i>
-                                    <i class="fa-light fa-star"></i>
-                                    <i class="fa-light fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-</section>
 
 
 @endsection

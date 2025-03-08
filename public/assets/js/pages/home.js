@@ -240,33 +240,6 @@ const App = Vue.createApp({
         this.menufacturerSlider();
         this.promoProductSlider();
         this.fetchProduct2();
-
-        new Swiper(".new-collectio-products", {
-            grid: {
-              rows: 2,
-            },
-            spaceBetween: 10,
-            breakpoints: {
-                300: {
-                  slidesPerView: 2,
-                  grid: {
-                    rows: 2,
-                  },
-                },
-                768: {
-                  slidesPerView: 3,
-                  grid: {
-                    rows: 2,
-                  },
-                },
-                992: {
-                  slidesPerView: 4,
-                  grid: {
-                    rows: 2,
-                  },
-                },
-            }
-        });
     },
 });
 
